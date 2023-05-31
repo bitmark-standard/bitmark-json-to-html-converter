@@ -1,0 +1,39 @@
+{
+    "name": "getmorebrain-bitmark-json-html-converter",
+    "version": "0.0.0",
+    "description": "Converting bitmark JSON to HTML.",
+    "author": {
+        "name": "Tobias Köngeter",
+        "email": "hello@bitandblack.com",
+        "homepage": "https://www.bitandblack.com"
+    },
+    "license": "proprietary",
+    "private": true,
+    "bin": {
+        "console": "bin/bitmark-json-to-pdf.js"
+    },
+    "dependencies": {
+        "bitandblack-console": "^0",
+        "js-beautify": "^1.0",
+        "jsdom": "^20.0",
+        "marked": "^4.0",
+        "qrcode-generator": "^1.0",
+        "sync-request": "^6.0"
+    },
+    "devDependencies": {
+        "@babel/preset-typescript": "^7.0",
+        "@types/jest": "^28.0",
+        "jest": "^28.0",
+        "jest-junit": "^15.0",
+        "ts-jest": "^28.0",
+        "typescript": "^4.0"
+    },
+    "engines": {
+        "node": ">=12.0"
+    },
+    "scripts": {
+        "build": "tsc",
+        "test": "jest --runInBand",
+        "test:ci": "jest --config ./jest.config.js --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --watchAll=false --detectOpenHandles"
+    }
+}
